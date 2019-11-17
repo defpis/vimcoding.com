@@ -271,6 +271,21 @@ class LoginResource(Resource, AuthenticateMixin):
         )
 ```
 
+需要定义UserSchema来序列化和反序列化，绑定当前的session对象，使之load回来的对象是orm的实例
+
+> app/api_v1/schemas/user.py
+
+```python
+from app.extensions import ma, session
+from ..models import User
+
+
+class UserSchema(ma.ModelSchema):
+    class Meta:
+        model = User
+        sqla_session = session
+```
+
 最后依次往上注册路由
 
 > app/api_v1/resources/auth/\_\_init\_\_.py
