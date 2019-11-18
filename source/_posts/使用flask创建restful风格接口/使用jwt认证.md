@@ -1,6 +1,6 @@
 ---
 title: "3. 使用jwt认证"
-date: 2019-11-03T00:00:00+08:00
+date: 2019-11-03 00:00:00
 categories:
 - 使用flask创建restful风格接口
 ---
