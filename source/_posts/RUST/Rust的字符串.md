@@ -9,7 +9,7 @@ categories:
 
 <!-- more  -->
 
-先看看Rust创建字符串*String*常用的三种方法：
+先看看Rust创建字符串String常用的三种方法：
 
 ```rust
 let s1 = "hello".to_string();
@@ -23,7 +23,7 @@ let s3 = format!("hello");
 let s1 = "hello";
 ```
 
-但在clion中会提示我们**s**是一个*&str*类型，Rust出于什么原因做这样的区分？这两个类型又有什么不同？
+但在clion中会提示我们s是一个&str类型，Rust出于什么原因做这样的区分？这两个类型又有什么不同？
 
 * str是存在内存中的动态长度的utf-8不可变序列，由于大小未知<?>，因此只能使用指针处理它，使用&str访问值
 
@@ -49,9 +49,9 @@ let s1 = "hello";
     let s3: &str = str::from_utf8(&[b'h', b'e', b'l', b'l', b'o']).unwrap();
     ```
 
-* String是具有*所有权*的动态字符串，分配在堆上，和Vec类似，当你需要拥有或修改数据时使用它
+* String是具有所有权的动态字符串，分配在堆上，和Vec类似，当你需要拥有或修改数据时使用它
 
-* &String对于String的借用，本质上是一个指针。通常可以被强制隐式转换为&str，所以很少直接使用
+* &String是对于String的借用，本质上是一个指针。通常可以被强制隐式转换为&str，所以很少直接使用
 
   > 使用&String的一种情况：将可变引用传递给需要修改字符串的函数
   >
@@ -70,5 +70,4 @@ let s1 = "hello";
 参考资料：
 
 * <https://www.ameyalokare.com/rust/2017/10/12/rust-str-vs-String.html>
-* <https://stackoverflow.com/questions/24158114/what-are-the-differences-between-rusts-string-and-str/24159933#24159933>
 * <http://llever.com/gentle-intro/pain-points.zh.html>
