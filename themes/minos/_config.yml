@@ -37,14 +37,14 @@ search:
 toc: false
 
 # Share plugin settings.
-share:
-  type: sharethis
-  install_url:
+# share:
+#   type: sharethis
+#   install_url:
 
 # Comment plugin settings.
-comment:
-  type: disqus
-  shortname:
+# comment:
+#   type: disqus
+#   shortname:
 
 # Other plugins and their settings.
 plugins:
