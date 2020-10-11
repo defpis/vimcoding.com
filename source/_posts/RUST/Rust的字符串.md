@@ -29,7 +29,7 @@ let s1 = "hello";
 
 * &str对某些utf-8数据的引用，通常称为"字符串切片"，它只是某些数据的视图，数据可以存储在任何地方：
 
-  * 静态存储：字符串字面量"hello"是&‘static str，程序运行时，数据被硬编码到可执行文件并加载到内存中
+  * 静态存储：字符串字面量"hello"是&'static str，程序运行时，数据被硬编码到可执行文件并加载到内存中
 
     ```rust
     let s1 = "hello";
@@ -71,3 +71,4 @@ let s1 = "hello";
 
 * <https://www.ameyalokare.com/rust/2017/10/12/rust-str-vs-String.html>
 * <http://llever.com/gentle-intro/pain-points.zh.html>
+* <https://blog.thoughtram.io/ownership-in-rust/>
